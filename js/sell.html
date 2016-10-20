@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Minor Project</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+    /* Remove the navbar's default rounded borders and increase the bottom margin */
+    .navbar {
+      margin-bottom: 50px;
+      border-radius: 0;
+    }
+    
+    /* Remove the jumbotron's default bottom margin */
+     .jumbotron {
+      margin-bottom: 0;
+    }
+   
+    /* Add a gray background color and some padding to the footer */
+    footer {
+      background-color: #f2f2f2;
+      padding: 25px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="jumbotron" style="background-color: purple;">
+  <div class="container text-center">
+    <h1 style="color: gold;">BoliLagao.com</h1>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header"> 
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+      </button> -->
+      <a class="navbar-brand" href="#">Logo</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="onlinestore.html">Home</a></li>
+        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Categories <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Women</a></li>
+          <li><a href="#">Men</a></li>
+          <li><a href="#">Appliances</a></li>
+          <li><a href="#">Home-Decor</a></li>
+        </ul>
+        </li>
+        <li class="active"><a href="#">Sell</a></li>
+        <li><a href="contact.html" target="_blank">Contact</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+
+          <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Login <span class="caret"></span></a>
+            <div class="dropdown-menu" style="padding: 15px; padding-bottom: 10px;">
+
+
+              <form action="login.php" method="post" accept-charset="UTF-8">
+                 <input id="user_username" style="margin-bottom: 15px;" type="Email" name="signin_email" size="30" placeholder="Email"/>
+                 <input id="user_password" style="margin-bottom: 15px;" type="Password" name="signin_password" size="30" placeholder="Password"/>
+                 <input id="user_remember_me" style="float: left; margin-right: 10px;" type="checkbox" name="user[remember_me]" value="1" />
+                 <label class="string optional" for="user_remember_me"> Remember me</label>
+     
+
+                 <input class="btn btn-primary" onclick="myFunction()" style="clear: left; width: 100%; height: 32px; font-size: 13px;" type="submit" name="commit" value="Sign In" />
+              </form>
+
+           
+            </div>
+          </li>
+
+          <li data-toggle="modal" data-target="#registerform"><a href="#">Register</a></li>
+          <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
+        </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="modal fade" id="registerform" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+        
+
+
+
+
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h3>Register</h3>
+        </div>
+        <div class="modal-body">
+          <form class="form-horizontal" action="signup.php" method="POST">
+            <fieldset>
+              <div class="control-group">
+                <label class="control-label" for="username">Username</label>
+                <div class="controls">
+                  <input type="text" id="username" name="username" placeholder="" class="form-control input-lg">
+                  <p class="help-block">Username can contain any letters or numbers, without spaces</p>
+                </div>
+              </div>
+           
+              <div class="control-group">
+                <label class="control-label" for="email">E-mail</label>
+                <div class="controls">
+                  <input type="email" id="email" name="email" placeholder="" class="form-control input-lg">
+                  <p class="help-block">Please provide your E-mail</p>
+                </div>
+              </div>
+           
+              <div class="control-group">
+                <label class="control-label" for="password">Password</label>
+                <div class="controls">
+                  <input type="password" id="password" name="password" placeholder="" class="form-control input-lg">
+                  <p class="help-block">Password should be at least 6 characters</p>
+                </div>
+              </div>
+           
+              <div class="control-group">
+                <label class="control-label" for="password_confirm">Password (Confirm)</label>
+                <div class="controls">
+                  <input type="password" id="password_confirm" name="password_confirm" placeholder="" class="form-control input-lg">
+                  <p class="help-block">Please confirm password</p>
+                </div>
+              </div>
+           
+              <div class="control-group">
+                <div class="controls">
+                  <button class="btn btn-success" type="submit">Register</button>
+                </div>
+              </div>
+
+            </fieldset>
+          </form>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+
+    </div> 
+
+      
+  </div>  
+</div>
+</div>
+
+
+
+<div class="container" style="margin-bottom: 20px;" >
+
+    <div class="col-sm-5" style="background-color: palegreen" >
+      <h2 style="color: maroon">Instructions for posting an ad :</h2>
+      <ul>
+        <li>Only Registered users can post an Advertisement.</li>
+        <li>Full product specifications are necessary.</li>
+        <li>Atleast 3 photographs of the product are compulsory along with the ad.</li>
+        <li>njlzxnxcjnjzxlzxncjnzjzccjjcjzxnxcjnjncjknzxzzjcxnjkzxnccjkn</li>
+        <li>kjddjlnccjlnjlcnjlzxnxcjnjzxlzxncjnzjzccjjcjzxnxcjnjncknxccjkna</li>
+        <li>jnjzxlzxncjnzjzccjjcjzxnxcjnjncjknzxzzjcxnjkzxnccjknxccjkna</li>
+        <li>njlzxnxcjnjzxlzxncjnzjzccjjcjzxnxcjnjncjknzxzzjcxnjkzxnccjkn</li>
+        <li>jnjzxlzxncjnzjzccjjcjzxnxcjnjncjknzxzzjcxnjkzxnccjknxccjkna</li>
+        <li>njlzxnxcjnjzxlzxncjnzjzccjjcjzxnxcjnjncjknzxzzjcxnjkzxnccjkn</li>
+        <li>kjddjlnccjlnjlcnjlzxnxcjnjzxlzxncjnzjzccjjcjzxnxcjnjncknxccjkna</li>
+      </ul>
+    </div>
+    <div class="col-sm-1"></div>
+
+    <div class="col-sm-6" >
+      <div class="container-fluid text-center">
+        <h3 style="color: maroon">Sell any Product for free !!</h3>
+        <h4 style="color: red">No Service Charge  </h4>
+        <h4 style="color: red">Limited Period Offer </h4>     
+      </div>
+      <div><br></div>
+      <div class="row">
+        <button type="button" class="btn btn-primary btn-block btn-lg margin-bottom" style="background-color: #191970; color: white; padding: 15px;"  data-toggle="modal" data-target="#personal"> Personal Details </button>
+      </div>
+      <div><br> </div>
+     
+      <div class="row">      
+        <button type="button" class="btn btn-primary btn-block btn-lg margin-up" style="background-color: #262626; color: white; padding: 15px;"  data-toggle="modal" data-target="#product"> Product Details </button>
+      </div>
+
+    </div>
+
+
+
+</div>
+
+
+<div class="modal fade" id="personal" role="dialog">
+  <div class="container">
+
+    <form class="well form-horizontal" action=" " method="post"  id="contact_form">
+      <fieldset>
+
+<!-- Form Name -->
+<legend>Personal Details</legend>
+
+<!-- Text input-->
+
+<div class="form-group">
+  <label class="col-md-4 control-label">First Name</label>  
+  <div class="col-md-4 inputGroupContainer">
+  <div class="input-group">
+  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+  <input  name="first_name" placeholder="First Name" class="form-control"  type="text">
+    </div>
+  </div>
+</div>
+
+<!-- Text input-->
+
+<div class="form-group">
+  <label class="col-md-4 control-label" >Last Name</label> 
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+  <input name="last_name" placeholder="Last Name" class="form-control"  type="text">
+    </div>
+  </div>
+</div>
+
+<!-- Text input-->
+       <div class="form-group">
+  <label class="col-md-4 control-label">E-Mail</label>  
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+  <input name="email" placeholder="E-Mail Address" class="form-control"  type="email">
+    </div>
+  </div>
+</div>
+
+
+<!-- Text input-->
+       
+<div class="form-group">
+  <label class="col-md-4 control-label">Phone #</label>  
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+  <input name="phone" placeholder="9827224099" class="form-control" type="text">
+    </div>
+  </div>
+</div>
+
+<!-- Text input-->
+      
+<div class="form-group">
+  <label class="col-md-4 control-label">Address</label>  
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+  <input name="address" placeholder="Address" class="form-control" type="text">
+    </div>
+  </div>
+</div>
+
+<!-- Text input-->
+ 
+<div class="form-group">
+  <label class="col-md-4 control-label">City</label>  
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+  <input name="city" placeholder="City" class="form-control"  type="text">
+    </div>
+  </div>
+</div>
+
+<!-- Select Basic -->
+   
+<div class="form-group"> 
+  <label class="col-md-4 control-label">State</label>
+    <div class="col-md-4 selectContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+    <select name="state" class="form-control selectpicker" >
+      <option value=" " >Please select your state</option>
+      <option>Madhya Pradesh</option>
+      <option>Delhi</option>
+      <option >Uttar Pradesh</option>
+      <option >Gujarat</option>
+      <option >Bihar</option>
+    </select>
+  </div>
+</div>
+</div>
+
+<!-- Text input-->
+
+<div class="form-group">
+  <label class="col-md-4 control-label">Zip Code</label>  
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+  <input name="zip" placeholder="Zip Code" class="form-control"  type="text">
+    </div>
+</div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label">Website or domain name</label>  
+   <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-globe"></i></span>
+  <input name="website" placeholder="Website or domain name" class="form-control" type="text">
+    </div>
+  </div>
+</div>
+
+<!-- radio checks -->
+ <div class="form-group">
+                        <label class="col-md-4 control-label">Have you hosted before</label>
+                        <div class="col-md-4">
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="hosting" value="yes" /> Yes
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="hosting" value="no" /> No
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+<!-- Text area -->
+  
+<div class="form-group">
+  <label class="col-md-4 control-label">Product Description</label>
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
+          <textarea class="form-control" name="comment" placeholder="Brief Details of Your Product"></textarea>
+  </div>
+  </div>
+</div>
+<!-- Button -->
+<div class="form-group">
+  <label class="col-md-4 control-label"></label>
+  <div class="col-md-4">
+    <button type="submit" class="btn btn-warning" >Done <span class="glyphicon glyphicon-send"></span></button>
+  </div>
+</div>
+
+</fieldset>
+</form>
+</div>
+    </div><!-- /.container -->
+  
+</div>
+
+
+<footer class="container-fluid text-center">
+  <p style="font: italic 900 15px/30px Georgia, serif">Online Store Copyright</p>
+  <form class="form-inline">Get deals:
+    <input type="email" class="form-control" size="50">
+    <button type="button" class="btn btn-danger">Search</button>
+  </form>
+</footer>
+
+</body>
+</html>
